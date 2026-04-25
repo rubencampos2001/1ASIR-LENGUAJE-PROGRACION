@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reparaciones Rubenshicar – Informe</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #f0f3f8 0%, #e8ecf3 100%);
+      color: #2c3e50;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+      color: white;
+      padding: 50px 32px;
+      border-bottom: 5px solid #e74c3c;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; font-weight: 800; }
+    .subtitulo { font-size: 1rem; color: #d4e0eb; margin-bottom: 8px; }
+    .fecha-gen { font-size: 0.9rem; color: #aab5c5; margin-top: 10px; }
+    nav {
+      background: linear-gradient(90deg, #2d5a7b 0%, #34495e 100%);
+      padding: 16px 32px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 11px 20px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: 0.25s;
+    }
+    nav a:hover { background: #e74c3c; transform: translateY(-2px); }
+    main { max-width: 1200px; margin: 40px auto; padding: 0 24px; }
+    section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 40px;
+      border-left: 6px solid #e74c3c;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    section:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.12); transform: translateY(-2px); }
+    section h2 {
+      font-size: 1.9rem;
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 4px solid #e74c3c;
+      color: #1a3a52;
+      font-weight: 800;
+    }
+    table { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    thead { background: linear-gradient(90deg, #1a3a52 0%, #2d5a7b 100%); color: white; }
+    thead th { padding: 16px 18px; text-align: left; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+    tbody tr { border-bottom: 1px solid #e8eef5; transition: 0.2s; }
+    tbody tr:nth-child(odd) { background: #f9fafb; }
+    tbody tr:hover { background: #e8f4f8; }
+    tbody td { padding: 15px 18px; font-size: 0.92rem; color: #2c3e50; font-weight: 500; }
+    #pendiente tbody tr { border-left: 6px solid #ffc107; }
+    #en_progreso tbody tr { border-left: 6px solid #3498db; }
+    #entregado tbody tr { border-left: 6px solid #27ae60; }
+    #mecanicos tbody tr { border-left: 6px solid #9b59b6; }
+    footer {
+      background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+      color: #d4dfe8;
+      padding: 40px 32px;
+      margin-top: 60px;
+      border-top: 6px solid #e74c3c;
+      text-align: center;
+    }
+    footer p { font-size: 0.95rem; line-height: 1.6; }
+    @media (max-width: 768px) {
+      header { padding: 24px 16px; }
+      header h1 { font-size: 1.8rem; }
+      nav { padding: 10px 16px; gap: 8px; }
+      nav a { padding: 6px 10px; font-size: 0.85rem; }
+      main { margin: 24px auto; padding: 0 16px; }
+      section { padding: 20px; margin-bottom: 24px; }
+      section h2 { font-size: 1.4rem; }
+      thead th, tbody td { padding: 10px 8px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔧 Reparaciones Rubenshicar</h1>
+    <p class="subtitulo">Málaga | Telf: 951 23 45 67</p>
+    <p class="fecha-gen">Informe generado: 2024-03-22</p>
+  </header>
+
+  <nav>
+    <a href="#pendiente">⏳ Pendientes</a>
+    <a href="#en_progreso">🔨 En progreso</a>
+    <a href="#entregado">✅ Entregados</a>
+    <a href="#mecanicos">👷 Mecánicos</a>
+  </nav>
+
+  <main>
+
+    <section id="pendiente">
+      <h2>⏳ Pendientes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Matrícula</th><th>Vehículo</th><th>Cliente</th>
+            <th>Mecánico</th><th>Fecha entrada</th><th>Descripción</th><th>Presupuesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>R004</td><td>5532PQR</td><td>Ford Focus</td><td>Laura Jiménez Navarro</td>
+            <td>M01</td><td>2024-03-20</td><td>Revisión general ITV y cambio de aceite</td><td>150.00 €</td>
+          </tr>
+          <tr>
+            <td>R006</td><td>3310VWX</td><td>Peugeot 308</td><td>Ana Belén Cortés Ramírez</td>
+            <td>M03</td><td>2024-03-22</td><td>Reparación de paragolpes trasero y cambio de luces</td><td>390.00 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="en_progreso">
+      <h2>🔨 En progreso</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Matrícula</th><th>Vehículo</th><th>Cliente</th>
+            <th>Mecánico</th><th>Fecha entrada</th><th>Descripción</th><th>Presupuesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>R003</td><td>2209GHJ</td><td>Renault Megane</td><td>Pedro Morales Castillo</td>
+            <td>M03</td><td>2024-03-18</td><td>Reparación de chapa tras golpe lateral y pintura</td><td>750.00 €</td>
+          </tr>
+          <tr>
+            <td>R005</td><td>9978STU</td><td>Toyota Corolla</td><td>Manuel García Expósito</td>
+            <td>M02</td><td>2024-03-21</td><td>Sustitución de batería y revisión de sensores</td><td>210.00 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="entregado">
+      <h2>✅ Entregados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Matrícula</th><th>Vehículo</th><th>Cliente</th>
+            <th>Mecánico</th><th>Fecha entrada</th><th>Fecha salida</th><th>Descripción</th><th>Presupuesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>R001</td><td>4823KLM</td><td>Seat Ibiza</td><td>Francisco Ruiz Torres</td>
+            <td>M01</td><td>2024-03-10</td><td>2024-03-13</td>
+            <td>Cambio de distribución y revisión de frenos delanteros</td><td>480.00 €</td>
+          </tr>
+          <tr>
+            <td>R002</td><td>7741BCD</td><td>Volkswagen Golf</td><td>María Carmen Delgado Prieto</td>
+            <td>M02</td><td>2024-03-14</td><td>2024-03-15</td>
+            <td>Fallo en el alternador y revisión del sistema eléctrico</td><td>320.00 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="mecanicos">
+      <h2>👷 Mecánicos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Nombre</th><th>Especialidad</th><th>Turno</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>M01</td><td>Rubén Campos Ibañez</td><td>Motor</td><td>Mañana</td></tr>
+          <tr><td>M02</td><td>Antonio Sánchez Vega</td><td>Electricidad</td><td>Tarde</td></tr>
+          <tr><td>M03</td><td>José Luis Fernández Mora</td><td>Chapa</td><td>Mañana</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2024 Reparaciones Rubenshicar – Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

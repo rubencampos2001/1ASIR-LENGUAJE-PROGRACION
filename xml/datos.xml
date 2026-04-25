@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+<!DOCTYPE taller SYSTEM "modelo.dtd">
+
+<taller nombre="Reparaciones Rubenshicar" localidad="Málaga" telefono="951234567">
+
+  <mecanicos>
+    <mecanico id="M01" especialidad="motor">
+      <nombre>Rubén Campos Ibañez</nombre>
+      <turno>mañana</turno>
+    </mecanico>
+    <mecanico id="M02" especialidad="electricidad">
+      <nombre>Antonio Sánchez Vega</nombre>
+      <turno>tarde</turno>
+    </mecanico>
+    <mecanico id="M03" especialidad="chapa">
+      <nombre>José Luis Fernández Mora</nombre>
+      <turno>mañana</turno>
+    </mecanico>
+  </mecanicos>
+
+  <reparaciones>
+
+    <reparacion id="R001" estado="entregado">
+      <matricula>4823KLM</matricula>
+      <marca>Seat</marca>
+      <modelo>Ibiza</modelo>
+      <cliente>Francisco Ruiz Torres</cliente>
+      <telefono_cliente>622345678</telefono_cliente>
+      <mecanico_ref ref="M01"/>
+      <fecha_entrada>2024-03-10</fecha_entrada>
+      <fecha_salida>2024-03-13</fecha_salida>
+      <descripcion>Cambio de distribución y revisión de frenos delanteros</descripcion>
+      <presupuesto>480.00</presupuesto>
+    </reparacion>
+
+    <reparacion id="R002" estado="entregado">
+      <matricula>7741BCD</matricula>
+      <marca>Volkswagen</marca>
+      <modelo>Golf</modelo>
+      <cliente>María Carmen Delgado Prieto</cliente>
+      <telefono_cliente>633456789</telefono_cliente>
+      <mecanico_ref ref="M02"/>
+      <fecha_entrada>2024-03-14</fecha_entrada>
+      <fecha_salida>2024-03-15</fecha_salida>
+      <descripcion>Fallo en el alternador y revisión del sistema eléctrico</descripcion>
+      <presupuesto>320.00</presupuesto>
+    </reparacion>
+
+    <reparacion id="R003" estado="en_progreso">
+      <matricula>2209GHJ</matricula>
+      <marca>Renault</marca>
+      <modelo>Megane</modelo>
+      <cliente>Pedro Morales Castillo</cliente>
+      <telefono_cliente>644567890</telefono_cliente>
+      <mecanico_ref ref="M03"/>
+      <fecha_entrada>2024-03-18</fecha_entrada>
+      <descripcion>Reparación de chapa tras golpe lateral y pintura</descripcion>
+      <presupuesto>750.00</presupuesto>
+    </reparacion>
+
+    <reparacion id="R004" estado="pendiente">
+      <matricula>5532PQR</matricula>
+      <marca>Ford</marca>
+      <modelo>Focus</modelo>
+      <cliente>Laura Jiménez Navarro</cliente>
+      <telefono_cliente>655678901</telefono_cliente>
+      <mecanico_ref ref="M01"/>
+      <fecha_entrada>2024-03-20</fecha_entrada>
+      <descripcion>Revisión general ITV y cambio de aceite</descripcion>
+      <presupuesto>150.00</presupuesto>
+    </reparacion>
+
+    <reparacion id="R005" estado="en_progreso">
+      <matricula>9978STU</matricula>
+      <marca>Toyota</marca>
+      <modelo>Corolla</modelo>
+      <cliente>Manuel García Expósito</cliente>
+      <telefono_cliente>666789012</telefono_cliente>
+      <mecanico_ref ref="M02"/>
+      <fecha_entrada>2024-03-21</fecha_entrada>
+      <descripcion>Sustitución de batería y revisión de sensores</descripcion>
+      <presupuesto>210.00</presupuesto>
+    </reparacion>
+
+    <reparacion id="R006" estado="pendiente">
+      <matricula>3310VWX</matricula>
+      <marca>Peugeot</marca>
+      <modelo>308</modelo>
+      <cliente>Ana Belén Cortés Ramírez</cliente>
+      <telefono_cliente>677890123</telefono_cliente>
+      <mecanico_ref ref="M03"/>
+      <fecha_entrada>2024-03-22</fecha_entrada>
+      <descripcion>Reparación de paragolpes trasero y cambio de luces</descripcion>
+      <presupuesto>390.00</presupuesto>
+    </reparacion>
+
+  </reparaciones>
+
+</taller>

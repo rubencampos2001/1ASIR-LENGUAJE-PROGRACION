@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taller SYSTEM "modelo.dtd">
+
+<!--
+  datos_error.xml - Archivo con errores intencionados para probar la validacion DTD
+  
+  ERRORES que contiene:
+  1. especialidad="pintura" no esta en la enumeracion (motor|electricidad|chapa|general)
+  2. estado="reparando" no esta en la enumeracion (pendiente|en_progreso|entregado)
+  3. mecanico_ref ref="M99" apunta a un ID que no existe (IDREF roto)
+  4. id="R001" repetido en dos reparaciones (IDs duplicados)
+-->
+
+<taller nombre="Reparaciones Rubenshicar" localidad="Málaga" telefono="951234567">
+
+  <mecanicos>
+    <!-- ERROR 1: especialidad "pintura" no esta permitida en el DTD -->
+    <mecanico id="M01" especialidad="pintura">
+      <nombre>Rubén Campos Ibañez</nombre>
+      <turno>mañana</turno>
+    </mecanico>
+    <mecanico id="M02" especialidad="electricidad">
+      <nombre>Antonio Sánchez Vega</nombre>
+      <turno>tarde</turno>
+    </mecanico>
+  </mecanicos>
+
+  <reparaciones>
+
+    <!-- ERROR 2: estado="reparando" no existe en la enumeracion del DTD -->
+    <reparacion id="R001" estado="reparando">
+      <matricula>4823KLM</matricula>
+      <marca>Seat</marca>
+      <modelo>Ibiza</modelo>
+      <cliente>Francisco Ruiz Torres</cliente>
+      <telefono_cliente>622345678</telefono_cliente>
+      <mecanico_ref ref="M01"/>
+      <fecha_entrada>2024-03-10</fecha_entrada>
+      <fecha_salida>2024-03-13</fecha_salida>
+      <descripcion>Cambio de distribución y revisión de frenos delanteros</descripcion>
+      <presupuesto>480.00</presupuesto>
+    </reparacion>
+
+    <!-- ERROR 3: ref="M99" no existe como ID en ningun mecanico (IDREF roto) -->
+    <!-- ERROR 4: id="R001" repetido, ya existe arriba -->
+    <reparacion id="R001" estado="entregado">
+      <matricula>7741BCD</matricula>
+      <marca>Volkswagen</marca>
+      <modelo>Golf</modelo>
+      <cliente>María Carmen Delgado Prieto</cliente>
+      <telefono_cliente>633456789</telefono_cliente>
+      <mecanico_ref ref="M99"/>
+      <fecha_entrada>2024-03-14</fecha_entrada>
+      <fecha_salida>2024-03-15</fecha_salida>
+      <descripcion>Fallo en el alternador y revisión del sistema eléctrico</descripcion>
+      <presupuesto>320.00</presupuesto>
+    </reparacion>
+
+  </reparaciones>
+
+</taller>

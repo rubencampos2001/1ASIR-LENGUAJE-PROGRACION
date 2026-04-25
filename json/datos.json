@@ -1,0 +1,113 @@
+{
+  "taller": {
+    "nombre": "Reparaciones Rubenshicar",
+    "localidad": "Málaga",
+    "telefono": "951234567",
+    "mecanicos": [
+      {
+        "id": "M01",
+        "nombre": "Rubén Campos Ibañez",
+        "especialidad": "motor",
+        "turno": "mañana"
+      },
+      {
+        "id": "M02",
+        "nombre": "Antonio Sánchez Vega",
+        "especialidad": "electricidad",
+        "turno": "tarde"
+      },
+      {
+        "id": "M03",
+        "nombre": "José Luis Fernández Mora",
+        "especialidad": "chapa",
+        "turno": "mañana"
+      }
+    ],
+    "reparaciones": [
+      {
+        "id": "R001",
+        "matricula": "4823KLM",
+        "marca": "Seat",
+        "modelo": "Ibiza",
+        "cliente": "Francisco Ruiz Torres",
+        "telefono_cliente": "622345678",
+        "mecanico_ref": "M01",
+        "fecha_entrada": "2024-03-10",
+        "fecha_salida": "2024-03-13",
+        "estado": "entregado",
+        "descripcion": "Cambio de distribución y revisión de frenos delanteros",
+        "presupuesto": 480.00
+      },
+      {
+        "id": "R002",
+        "matricula": "7741BCD",
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "cliente": "María Carmen Delgado Prieto",
+        "telefono_cliente": "633456789",
+        "mecanico_ref": "M02",
+        "fecha_entrada": "2024-03-14",
+        "fecha_salida": "2024-03-15",
+        "estado": "entregado",
+        "descripcion": "Fallo en el alternador y revisión del sistema eléctrico",
+        "presupuesto": 320.00
+      },
+      {
+        "id": "R003",
+        "matricula": "2209GHJ",
+        "marca": "Renault",
+        "modelo": "Megane",
+        "cliente": "Pedro Morales Castillo",
+        "telefono_cliente": "644567890",
+        "mecanico_ref": "M03",
+        "fecha_entrada": "2024-03-18",
+        "fecha_salida": null,
+        "estado": "en_progreso",
+        "descripcion": "Reparación de chapa tras golpe lateral y pintura",
+        "presupuesto": 750.00
+      },
+      {
+        "id": "R004",
+        "matricula": "5532PQR",
+        "marca": "Ford",
+        "modelo": "Focus",
+        "cliente": "Laura Jiménez Navarro",
+        "telefono_cliente": "655678901",
+        "mecanico_ref": "M01",
+        "fecha_entrada": "2024-03-20",
+        "fecha_salida": null,
+        "estado": "pendiente",
+        "descripcion": "Revisión general ITV y cambio de aceite",
+        "presupuesto": 150.00
+      },
+      {
+        "id": "R005",
+        "matricula": "9978STU",
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "cliente": "Manuel García Expósito",
+        "telefono_cliente": "666789012",
+        "mecanico_ref": "M02",
+        "fecha_entrada": "2024-03-21",
+        "fecha_salida": null,
+        "estado": "en_progreso",
+        "descripcion": "Sustitución de batería y revisión de sensores",
+        "presupuesto": 210.00
+      },
+      {
+        "id": "R006",
+        "matricula": "3310VWX",
+        "marca": "Peugeot",
+        "modelo": "308",
+        "cliente": "Ana Belén Cortés Ramírez",
+        "telefono_cliente": "677890123",
+        "mecanico_ref": "M03",
+        "fecha_entrada": "2024-03-22",
+        "fecha_salida": null,
+        "estado": "pendiente",
+        "descripcion": "Reparación de paragolpes trasero y cambio de luces",
+        "presupuesto": 390.00
+      }
+    ]
+  }
+}

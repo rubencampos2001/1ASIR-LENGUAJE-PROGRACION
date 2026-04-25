@@ -1,0 +1,46 @@
+<!-- modelo.dtd - Esquema de validacion del taller Rubenshicar -->
+<!-- Modulo: Lenguajes de Marcas - 1º ASIR -->
+
+<!ELEMENT taller (mecanicos, reparaciones)>
+<!ATTLIST taller
+  nombre     CDATA  #REQUIRED
+  localidad  CDATA  #REQUIRED
+  telefono   CDATA  #REQUIRED>
+
+<!-- MECANICOS -->
+<!ELEMENT mecanicos (mecanico+)>
+
+<!ELEMENT mecanico (nombre, turno)>
+<!ATTLIST mecanico
+  id           ID                                    #REQUIRED
+  especialidad (motor|electricidad|chapa|general)    #REQUIRED>
+
+<!ELEMENT nombre  (#PCDATA)>
+<!ELEMENT turno   (#PCDATA)>
+
+<!-- REPARACIONES -->
+<!ELEMENT reparaciones (reparacion+)>
+
+<!-- estado va como atributo para poder restringirlo con enumeracion -->
+<!ELEMENT reparacion (matricula, marca, modelo, cliente, telefono_cliente,
+                      mecanico_ref, fecha_entrada, fecha_salida?,
+                      descripcion, presupuesto)>
+<!ATTLIST reparacion
+  id      ID                                     #REQUIRED
+  estado  (pendiente|en_progreso|entregado)       #REQUIRED>
+
+<!ELEMENT matricula        (#PCDATA)>
+<!ELEMENT marca            (#PCDATA)>
+<!ELEMENT modelo           (#PCDATA)>
+<!ELEMENT cliente          (#PCDATA)>
+<!ELEMENT telefono_cliente (#PCDATA)>
+
+<!-- ref es IDREF para que apunte al id de un mecanico real -->
+<!ELEMENT mecanico_ref EMPTY>
+<!ATTLIST mecanico_ref
+  ref  IDREF  #REQUIRED>
+
+<!ELEMENT fecha_entrada  (#PCDATA)>
+<!ELEMENT fecha_salida   (#PCDATA)>
+<!ELEMENT descripcion    (#PCDATA)>
+<!ELEMENT presupuesto    (#PCDATA)>
